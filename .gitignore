@@ -10,3 +10,5 @@ __pycache__/
 
 # images
 *.jpg
+
+!pic/example*.jpg
