@@ -5,19 +5,19 @@ import pathlib
 
 
 
-project_dir = pathlib.Path('__file__').resolve().parents[2]
+project_dir = pathlib.Path(__file__).resolve().parents[2]
 print(project_dir)
 
 
 def basic_pil_test(img_path: str | pathlib.Path):
-    img: PIL.Image = Image.open(img_path)
+    img: PIL.Image.Image = Image.open(img_path)
     print(f"Image loaded from: {img_path}")
     print(f"Image format: {img.format}")
     print(f"Image size: {img.size}")
     print(f"Image mode: {img.mode}")
     # print(f"Image info: {img.info}")
     print(f"Image exif:")
-    exif = img._getexif()
+    exif = img.getexif()
     for tag, value in exif.items():
         tag_name = ExifTags.TAGS.get(tag, tag)
         value_str = str(value)
