@@ -17,7 +17,7 @@ def basic_pil_test(img_path: str | pathlib.Path):
     print(f"Image mode: {img.mode}")
     # print(f"Image info: {img.info}")
     print(f"Image exif:")
-    exif = img._getexif()
+    exif = img.getexif()
     for tag, value in exif.items():
         tag_name = ExifTags.TAGS.get(tag, tag)
         value_str = str(value)
