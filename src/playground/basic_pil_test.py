@@ -1,9 +1,7 @@
-from PIL import Image, ExifTags
-import PIL
-
 import pathlib
 
-
+import PIL.Image
+from PIL import ExifTags, Image
 
 project_dir = pathlib.Path(__file__).resolve().parents[2]
 print(project_dir)

@@ -4,6 +4,7 @@ from typing import Any, Literal, cast, overload
 
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
+
 MM_PER_INCH = 25.4
 type Point_T = tuple[float, float]
 type Vector_T = tuple[float, float]
