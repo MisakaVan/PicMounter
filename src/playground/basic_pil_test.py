@@ -5,12 +5,12 @@ import pathlib
 
 
 
-project_dir = pathlib.Path('__file__').resolve().parents[2]
+project_dir = pathlib.Path(__file__).resolve().parents[2]
 print(project_dir)
 
 
 def basic_pil_test(img_path: str | pathlib.Path):
-    img: PIL.Image = Image.open(img_path)
+    img: PIL.Image.Image = Image.open(img_path)
     print(f"Image loaded from: {img_path}")
     print(f"Image format: {img.format}")
     print(f"Image size: {img.size}")
