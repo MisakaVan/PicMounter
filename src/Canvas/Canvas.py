@@ -1,7 +1,8 @@
 import pathlib
 
-import PIL
-from PIL import Image, ExifTags
+import PIL.Image
+from PIL import Image
+
 
 class Canvas:
     """
@@ -18,5 +19,3 @@ class Canvas:
     def save(self, path: str | pathlib.Path):
         self.current_image.save(path, exif=self.raw_image.getexif())
         return path
-
-

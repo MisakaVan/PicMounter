@@ -1,9 +1,6 @@
-import os
-import PIL
-from PIL import Image, ExifTags
+from typing import final
 
 from src.Canvas.Canvas import Canvas
-from typing import override, final
 
 
 class ProcessorUnit:
@@ -18,7 +15,7 @@ class ProcessorUnit:
     _name: str
     _description: str
 
-    _default_description = "A ProcessorUnit that does nothing." # Subclasses should override this.
+    _default_description = "A ProcessorUnit that does nothing."  # Subclasses should override this.
 
     def __init__(self,
                  config: dict | None = None,
@@ -68,7 +65,7 @@ class ProcessorUnit:
     def _beautify_str(self) -> list[str]:
         indent = " " * 2
 
-        make_indent = lambda s: indent + s
+        def make_indent(s): return indent + s
 
         indented_recipe = list(map(make_indent, self._recipe_as_list()))
 

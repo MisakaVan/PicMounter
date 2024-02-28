@@ -1,6 +1,7 @@
-from src.Processor.ProcessorUnit import ProcessorUnit
+from typing import final, override
+
 from src.Canvas.Canvas import Canvas
-from typing import override, final
+from src.Processor.ProcessorUnit import ProcessorUnit
 
 
 class ProcessorChain(ProcessorUnit):

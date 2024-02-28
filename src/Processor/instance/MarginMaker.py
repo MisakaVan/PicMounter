@@ -1,20 +1,16 @@
 """
 A ProcessorUnit that adds a configurable margin to the image.
 """
+
 import os.path
 import pathlib
-import PIL
-import colorsys
-from PIL import Image, ImageOps, ImageColor
+from typing import Any, override
 
-from src.Processor.ProcessorUnit import ProcessorUnit
+from loguru import logger
+from PIL import Image
+
 from src.Canvas.Canvas import Canvas
-
-from typing import override, Any
-
-import loguru
-
-logger = loguru.logger
+from ..ProcessorUnit import ProcessorUnit
 
 
 class MarginMaker(ProcessorUnit):
@@ -38,7 +34,7 @@ class MarginMaker(ProcessorUnit):
                  right=0,
                  top=0,
                  bottom=0,
-                 color="white"
+                 color="white",
                  ):
         """
 
